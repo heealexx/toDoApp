@@ -1,0 +1,62 @@
+body {
+  margin: 0;
+  background-color: #606C5D;
+  color: #F7E6C4;
+}
+
+#grid-container {
+  display: grid;
+  grid-template-columns: 1fr 200px 200px;
+  grid-template-rows: 100px 1fr;
+}
+
+#header {
+  grid-row: 1 / 2;
+  grid-column: 1 / 4;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+#header h1 {
+  margin-left: 25px;
+}
+
+#task-list {
+  grid-row: 2 / 3;
+  grid-column: 1 / 2;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+#new-task {
+  grid-row: 2 / 3;
+  grid-column: 3 / 4;
+}
+
+#task {
+  height: 200px;
+  width: 200px;
+  border: 1px solid #F7E6C4;
+  margin-left: 25px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#projects-list {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3
+}
+
+.close-text {
+  letter-spacing: 0;
+}
+
+.finish-button {
+  background-image: url(../src/finish.svg);
+  width: 50px;
+  height: 50px;
+}
